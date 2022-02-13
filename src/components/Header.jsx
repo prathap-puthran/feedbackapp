@@ -1,12 +1,12 @@
 function Header(props) {
   return (
-    <div className="flex justify-center bg-gray-500 py-5">
-      <h1 className="text-4xl text-gray-200 "> 
-      
-      {props.name  }
-      
-      </h1>
-      </div>
+    <header style={{backgroundColor:props.bgColor,color:props.textColor}}>
+     <div className="container">
+
+<h2 className="text-4xl">{props.name}</h2>
+
+     </div>
+      </header>
   )
 }
 
