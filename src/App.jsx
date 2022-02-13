@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Feedbackitem from "./components/Feedbackitem"
+import FeedbackStats from "./components/FeedbackStats"
 import Header from "./components/Header"
 
 import FeedbackData from "./data/feed"
@@ -20,6 +21,7 @@ setFeedbackdata(Feedbackdata.filter((i)=> i.id !== d ))
   return <>
 
 <Header name='Feedback UI' bgColor="rgba(0,0,0,0.4)" textColor="#ff6a95" />
+<FeedbackStats Feedbackdata={Feedbackdata} />
 <div className="container">
   {Feedbackdata.map((a)=>{return (<Feedbackitem text={a.text} rating = {a.rating} id={a.id} handleDelete={(d)=>handleDelete(d)} />)})} 
 </div>
