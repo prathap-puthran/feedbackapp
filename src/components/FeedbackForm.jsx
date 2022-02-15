@@ -46,7 +46,7 @@ setText('')
   return (
     <>
     <Card >
-        <form action="" onSubmit={handlesubmit}>
+        <form action="" onSubmit={(e)=>{handlesubmit(e);setdisabled(true)}}>
             <h1>how would you rate your service with us?</h1>
             <Ratingselector selectedNum={selectedNum} />
 
